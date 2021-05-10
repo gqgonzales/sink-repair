@@ -1,0 +1,25 @@
+/* 
+
+Tips
+Use flex-direction: column on the wrapper <div> elements.
+Copy the button CSS from a previous project and choose a background color and font color of your choice.
+Make the font size of the labels slightly larger than the default size.
+
+*/
+
+.field {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 1rem 2rem;
+}
+
+.button {
+  color: #f5f5f6;
+  background-color: #464ea0;
+  margin: 0.05rem 2rem;
+}
+
+.label {
+  font-size: larger;
+}
