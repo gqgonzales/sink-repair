@@ -1,7 +1,5 @@
-
 export const ServiceForm = () => {
-    let html = ""
+  let html = "<h2>Service Form</h2>";
 
-    return html
-}
-
+  return html;
+};
