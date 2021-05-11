@@ -1,4 +1,4 @@
-import { getRequests } from "./dataAccess.js";
+import { getRequests, deleteRequest } from "./dataAccess.js";
 
 export const Requests = () => {
   let requests = getRequests();
