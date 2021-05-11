@@ -9,15 +9,15 @@ export const Requests = () => {
               .map((requestObject) => {
                 return `
                 <li>
-                    ID: ${requestObject.id}
-                    Description: ${requestObject.description}
-                    Address: ${requestObject.address}
-                    Budget: $${requestObject.budget}
-                    Due Date: ${requestObject.neededBy}
+                        ID: ${requestObject.id}
+                        Description: ${requestObject.description}
+                        Address: ${requestObject.address}
+                        Budget: $${requestObject.budget}
+                        Due Date: ${requestObject.neededBy}
                     <button class="request__delete"
-                id="request--${request.id}">
-            Delete
-        </button>
+                      id="request--${requestObject.id}">
+                        Delete
+                    </button>
                 </li>
                 `;
               })

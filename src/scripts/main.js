@@ -10,3 +10,8 @@ const render = () => {
 };
 
 render();
+
+// Now your main module has to listen for the custom event and invoke the render() function to build all the HTML again.
+mainContainer.addEventListener("stateChanged", (customEvent) => {
+  render();
+});
