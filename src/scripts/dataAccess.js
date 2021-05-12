@@ -1,5 +1,6 @@
 const applicationState = {
   requests: [],
+  plumbers: [],
 };
 
 const mainContainer = document.querySelector("#container");
@@ -19,6 +20,19 @@ export const getRequests = () => {
   const copyOfData = [...applicationState.requests];
   return copyOfData;
 };
+
+// export const fetchPlumbers = () => {
+//   return fetch(`${API}/plumbers`)
+//     .then((res) => res.json())
+//     .then((plumberSelect) => {
+      // Store the external state in application state
+//       applicationState.plumbers = plumberSelect;
+//     });
+// };
+
+// export const getPlumbers = () => {
+//   return [...applicationState.plumbers];
+// };
 
 export const sendRequest = (userServiceRequest) => {
   const fetchOptions = {
@@ -46,3 +60,8 @@ export const deleteRequest = (id) => {
     mainContainer.dispatchEvent(new CustomEvent("stateChanged"));
   });
 };
+
+/* 
+saveCompletion() - This will perform the POST request to save the completion object to the API
+fetchCompletions() - This will retrieve all completion objects from the API
+*/
