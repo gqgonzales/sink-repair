@@ -3,11 +3,13 @@ import {
   deleteRequest,
   getPlumbers,
   saveCompletion,
+  getCompletions,
 } from "./dataAccess.js";
 
 export const Requests = () => {
   let requests = getRequests();
   let plumbers = getPlumbers();
+  let completions = getCompletions();
 
   let html = `
         <ul>
@@ -21,7 +23,7 @@ export const Requests = () => {
                         Budget: $${requestObject.budget}
                         Due Date: ${requestObject.neededBy}
                         <select class="plumbers" id="plumbers">
-                        <option value="">Choose Plumber</option>
+                        <option value="">Completed By</option>
                             ${plumbers.map((plumbers) => {
                               return `<option value="${requestObject.id}--${plumbers.name}">${plumbers.name}</option>`;
                             })}
@@ -55,7 +57,10 @@ mainContainer.addEventListener("change", (event) => {
     const completion = {
       requestId,
       plumberId,
-      date_created: new Date().toLocaleDateString,
+      date_created:
+        new Date().toLocaleTimeString() +
+        " " +
+        new Date().toLocaleDateString(),
     };
 
     /*
