@@ -17,22 +17,21 @@ export const fetchRequests = () => {
 };
 
 export const getRequests = () => {
-  const copyOfData = [...applicationState.requests];
-  return copyOfData;
+  return [...applicationState.requests];
 };
 
-// export const fetchPlumbers = () => {
-//   return fetch(`${API}/plumbers`)
-//     .then((res) => res.json())
-//     .then((plumberSelect) => {
+export const fetchPlumbers = () => {
+  return fetch(`${API}/plumbers`)
+    .then((res) => res.json())
+    .then((plumberSelect) => {
       // Store the external state in application state
-//       applicationState.plumbers = plumberSelect;
-//     });
-// };
+      applicationState.plumbers = plumberSelect;
+    });
+};
 
-// export const getPlumbers = () => {
-//   return [...applicationState.plumbers];
-// };
+export const getPlumbers = () => {
+  return [...applicationState.plumbers];
+};
 
 export const sendRequest = (userServiceRequest) => {
   const fetchOptions = {
