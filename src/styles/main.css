@@ -30,3 +30,10 @@ h6 {
   background-color: #cd5c5c;
   color: white;
 }
+
+.request_object {
+  list-style-type: none;
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px black solid;
+}

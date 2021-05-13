@@ -1,6 +1,7 @@
 const applicationState = {
   requests: [],
   plumbers: [],
+  completions: [],
 };
 
 const mainContainer = document.querySelector("#container");
@@ -60,7 +61,32 @@ export const deleteRequest = (id) => {
   });
 };
 
-/* 
-saveCompletion() - This will perform the POST request to save the completion object to the API
-fetchCompletions() - This will retrieve all completion objects from the API
-*/
+// saveCompletion() - This will perform the POST request to save the completion object to the API
+export const saveCompletion = (completion) => {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(completion),
+  };
+
+  return fetch(`${API}/plumbers`, fetchOptions)
+    .then((response) => response.json())
+    .then(() => {
+      mainContainer.dispatchEvent(
+        new CustomEvent("stateChanged")
+      );
+    });
+};
+
+// fetchCompletions() - This will retrieve all completion objects from the API
+
+export const fetchCompletions = () => {
+  return fetch(`${API}/completions`)
+    .then((res) => res.json())
+    .then((completionObject) => {
+      // Store the external state in application state
+      applicationState.completions = completionObject;
+    });
+};
