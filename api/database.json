@@ -7,69 +7,31 @@
     {
       "id": 2,
       "name": "Maude"
-    },
-    {
-      "requestId": "1",
-      "plumberId": "Merle",
-      "id": 3
-    },
-    {
-      "requestId": "1",
-      "plumberId": "Maude",
-      "id": 4
-    },
-    {
-      "requestId": "5",
-      "plumberId": "Maude",
-      "id": 5
-    },
-    {
-      "requestId": "5",
-      "plumberId": "undefined",
-      "id": 6
-    },
-    {
-      "requestId": "1",
-      "plumberId": "Maude",
-      "id": 7
-    },
-    {
-      "requestId": "5",
-      "plumberId": "Merle",
-      "id": 8
-    },
-    {
-      "requestId": "1",
-      "plumberId": "Merle",
-      "id": 9
-    },
-    {
-      "requestId": "1",
-      "plumberId": "Merle",
-      "id": 10
     }
   ],
   "completions": [
     {
       "requestId": "1",
-      "plumberId": "Merle",
+      "plumberId": "plumbers",
+      "date_created": "3:41:15 PM 5/13/2021",
       "id": 1
     },
     {
-      "requestId": "4",
-      "plumberId": "Maude",
+      "requestId": "1",
+      "plumberId": "plumberChoices",
+      "date_created": "3:45:50 PM 5/13/2021",
       "id": 2
     },
     {
-      "requestId": "4",
-      "plumberId": "Maude",
-      "date_created": "2:07:21 PM 5/13/2021",
+      "requestId": "2",
+      "plumberId": "plumberChoices",
+      "date_created": "3:45:55 PM 5/13/2021",
       "id": 3
     },
     {
-      "requestId": "1",
-      "plumberId": "Maude",
-      "date_created": "2:27:37 PM 5/13/2021",
+      "requestId": "3",
+      "plumberId": "plumberChoices",
+      "date_created": "3:48:07 PM 5/13/2021",
       "id": 4
     }
   ],

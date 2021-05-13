@@ -22,10 +22,10 @@ export const Requests = () => {
                         Address: ${requestObject.address}
                         Budget: $${requestObject.budget}
                         Due Date: ${requestObject.neededBy}
-                        <select class="plumbers" id="plumbers">
+                        <select class="plumbers" id="plumberChoices">
                         <option value="">Completed By</option>
                             ${plumbers.map((plumbers) => {
-                              return `<option value="${requestObject.id}--${plumbers.name}">${plumbers.name}</option>`;
+                              return `<option name="plumber" value="${requestObject.id}" id="${plumbers.id}">${plumbers.name}</option>`;
                             })}
                         </select>
                     <button class="request__delete"
@@ -45,9 +45,10 @@ export const Requests = () => {
 const mainContainer = document.querySelector("#container");
 
 mainContainer.addEventListener("change", (event) => {
-  if (event.target.id === "plumbers") {
-    const [requestId, plumberId] =
-      event.target.value.split("--");
+  if (event.target.id === "plumberChoices") {
+    const plumberId = event.target.id;
+    const requestId = event.target.value;
+
     /*
               This object should have 3 properties
                  1. requestId
