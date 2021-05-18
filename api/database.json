@@ -9,32 +9,7 @@
       "name": "Maude"
     }
   ],
-  "completions": [
-    {
-      "requestId": "1",
-      "plumberId": "plumbers",
-      "date_created": "3:41:15 PM 5/13/2021",
-      "id": 1
-    },
-    {
-      "requestId": "1",
-      "plumberId": "plumberChoices",
-      "date_created": "3:45:50 PM 5/13/2021",
-      "id": 2
-    },
-    {
-      "requestId": "2",
-      "plumberId": "plumberChoices",
-      "date_created": "3:45:55 PM 5/13/2021",
-      "id": 3
-    },
-    {
-      "requestId": "3",
-      "plumberId": "plumberChoices",
-      "date_created": "3:48:07 PM 5/13/2021",
-      "id": 4
-    }
-  ],
+  "completions": [],
   "requests": [
     {
       "id": 1,
@@ -65,11 +40,11 @@
       "id": 4
     },
     {
-      "description": "Testing Testin",
-      "address": "123 Test St",
-      "budget": "1200",
-      "neededBy": "2021-05-26",
-      "id": 5
+      "description": "Bubbly sink needs some love!!",
+      "address": "9274 High Point Ave",
+      "budget": "700",
+      "neededBy": "2021-05-22",
+      "id": 6
     }
   ]
 }

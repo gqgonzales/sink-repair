@@ -6,10 +6,11 @@ import {
   getCompletions,
 } from "./dataAccess.js";
 
+let completions = getCompletions();
+
 export const Requests = () => {
   let requests = getRequests();
   let plumbers = getPlumbers();
-  let completions = getCompletions();
 
   let html = `
         <ul>
@@ -35,11 +36,19 @@ export const Requests = () => {
                 </li>
                 `;
               })
-              .join("")}
+              .join("\n")}
         </ul>
     `;
 
   return html;
+};
+
+const convertCompletionToListElement = (completion) => {
+  return `
+  <li class="completions">
+  <strong>Service Order ${completion.id}</strong>, completed on ${completion.date_created}.
+  </li>
+  `;
 };
 
 const mainContainer = document.querySelector("#container");
@@ -73,6 +82,7 @@ mainContainer.addEventListener("change", (event) => {
   }
 });
 
+// The "Delete" event listner
 mainContainer.addEventListener("click", (click) => {
   if (click.target.id.startsWith("request--")) {
     const [, requestId] = click.target.id.split("--");

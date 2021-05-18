@@ -22,6 +22,14 @@ export const getRequests = () => {
   return [...applicationState.requests];
 };
 
+/* export const getRequests = () => {
+  const isComplete = [applicationState.requests];
+  isComplete.sort((current, next) => {
+    return current.isComplete - next.isComplete;
+  });
+  return isComplete;
+}; */
+
 export const sendRequest = (userServiceRequest) => {
   const fetchOptions = {
     method: "POST",
